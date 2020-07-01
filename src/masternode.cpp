@@ -358,7 +358,7 @@ bool CMasternode::IsValidNetAddr()
 
 unsigned CMasternode::Level(CAmount vin_val, int blockHeight)
 {
-    if (blockHeight >= 0 && blockHeight < 346500) {
+    if (blockHeight >= 0 && blockHeight < 100) {
         switch(vin_val) {
             case 80000  * COIN: return 1;
             case 100000 * COIN: return 2;
@@ -368,7 +368,7 @@ unsigned CMasternode::Level(CAmount vin_val, int blockHeight)
         switch(vin_val) {
             case 10000  * COIN: return 1;
             case 50000  * COIN: return 2;
-            case 150000 * COIN: return 3;
+            case 100000 * COIN: return 3;
         }
     }
 
