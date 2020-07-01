@@ -201,9 +201,9 @@ void MasternodeList::updateMyMasternodeInfo(QString strAlias, QString strAddr, C
     if (pmn) {
         switch (pmn->Level())
         {
-            case 1: mnLevelText = "Basic Node"; break;
-            case 2: mnLevelText = "Classic Node"; break;
-            case 3: mnLevelText = "Standard Node"; break;
+            case 1: mnLevelText = "Small Node"; break;
+            case 2: mnLevelText = "Medium Node"; break;
+            case 3: mnLevelText = "Large Node"; break;
         }
     }
 
@@ -283,9 +283,9 @@ void MasternodeList::updateNodeList()
     BOOST_FOREACH (CMasternode& mn, vMasternodes) {
         switch (mn.Level())
         {
-            case 1: mnLevelText = "Basic Node"; break;
-            case 2: mnLevelText = "Classic Node"; break;
-            case 3: mnLevelText = "Standard Node"; break;
+            case 1: mnLevelText = "Small Node"; break;
+            case 2: mnLevelText = "Medium Node"; break;
+            case 3: mnLevelText = "Large Node"; break;
         }
 
         if (strCurrentFilter != "") {
