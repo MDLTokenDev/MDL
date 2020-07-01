@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=mdl
+Comment=mdl P2P Cryptocurrency
+Exec=mdl-qt %u
+Terminal=false
+Type=Application
+Icon=mdl128
+MimeType=x-scheme-handler/mdl;
+Categories=Office;Finance;
+Name[en_US]=mdl-qt.desktop

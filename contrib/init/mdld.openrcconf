@@ -1,0 +1,26 @@
+# /etc/conf.d/mdld: config file for /etc/init.d/mdld
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/mdl/mdl.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/mdld"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/mdld.pid"
+
+# Where to write mdld data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/mdld"
+
+# User and group to own mdld process
+#BITCOIND_USER="mdl"
+#BITCOIND_GROUP="mdl"
+
+# Path to mdld executable
+#BITCOIND_BIN="/usr/bin/mdld"
+
+# Nice value to run mdld under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

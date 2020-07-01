@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/mdl_bg.qm</file>
+        <file alias="ca">locale/mdl_ca.qm</file>
+        <file alias="cs">locale/mdl_cs.qm</file>
+        <file alias="da">locale/mdl_da.qm</file>
+        <file alias="de">locale/mdl_de.qm</file>
+        <file alias="en">locale/mdl_en.qm</file>
+        <file alias="en_US">locale/mdl_en_US.qm</file>
+        <file alias="es">locale/mdl_es.qm</file>
+        <file alias="fi">locale/mdl_fi.qm</file>
+        <file alias="fr_FR">locale/mdl_fr_FR.qm</file>
+        <file alias="hr">locale/mdl_hr.qm</file>
+        <file alias="it">locale/mdl_it.qm</file>
+        <file alias="ja">locale/mdl_ja.qm</file>
+        <file alias="ko_KR">locale/mdl_ko_KR.qm</file>
+        <file alias="nl">locale/mdl_nl.qm</file>
+        <file alias="pl">locale/mdl_pl.qm</file>
+        <file alias="pt">locale/mdl_pt.qm</file>
+        <file alias="pt_BR">locale/mdl_pt_BR.qm</file>
+        <file alias="ro_RO">locale/mdl_ro_RO.qm</file>
+        <file alias="ru">locale/mdl_ru.qm</file>
+        <file alias="sk">locale/mdl_sk.qm</file>
+        <file alias="sv">locale/mdl_sv.qm</file>
+        <file alias="tr">locale/mdl_tr.qm</file>
+        <file alias="uk">locale/mdl_uk.qm</file>
+        <file alias="zh_CN">locale/mdl_zh_CN.qm</file>
+        <file alias="zh_TW">locale/mdl_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,26 @@
+[Unit]
+Description=mdl's distributed currency daemon
+After=network.target
+
+[Service]
+User=mdl
+Group=mdl
+
+Type=forking
+PIDFile=/var/lib/mdld/mdld.pid
+
+ExecStart=/usr/bin/mdld -daemon -pid=/var/lib/mdld/mdld.pid \
+          -conf=/etc/mdl/mdl.conf -datadir=/var/lib/mdld
+
+ExecStop=-/usr/bin/mdl-cli -conf=/etc/mdl/mdl.conf \
+         -datadir=/var/lib/mdld stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

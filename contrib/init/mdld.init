@@ -1,0 +1,67 @@
+#!/bin/bash
+#
+#  mdld The MDL Community Token Core server.
+#
+#
+# chkconfig: 345 80 20
+# description: mdld
+# processname: mdld
+#
+
+# Source function library.
+. /etc/init.d/functions
+
+# you can override defaults in /etc/sysconfig/mdld, see below
+if [ -f /etc/sysconfig/mdld ]; then
+        . /etc/sysconfig/mdld
+fi
+
+RETVAL=0
+
+prog=mdld
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/mdld
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/mdld}
+
+# mdld defaults to /usr/bin/mdld, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/mdld}
+
+# mdld opts default to -disablewallet, override with BITCOIND_OPTS
+bitcoind_opts=${BITCOIND_OPTS}
+
+start() {
+    echo -n $"Starting $prog: "
+    daemon $DAEMONOPTS $bitcoind $bitcoind_opts
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && touch $lockfile
+    return $RETVAL
+}
+
+stop() {
+    echo -n $"Stopping $prog: "
+    killproc $prog
+    RETVAL=$?
+    echo
+    [ $RETVAL -eq 0 ] && rm -f $lockfile
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status $prog
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: service $prog {start|stop|status|restart}"
+        exit 1
+        ;;
+esac
