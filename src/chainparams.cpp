@@ -184,6 +184,8 @@ public:
 
 
         vSeeds.push_back(CDNSSeedData("seed.minedoge.live", "seed.minedoge.live"));
+	vSeeds.push_back(CDNSSeedData("seed2.minedoge.live", "seed2.minedoge.live"));
+	vSeeds.push_back(CDNSSeedData("seed3.minedoge.live", "seed3.minedoge.live"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 50); // M
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 85); // b
